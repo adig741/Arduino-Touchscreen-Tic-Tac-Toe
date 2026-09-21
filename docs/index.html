@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Tic-Tac-Toe על Arduino Mega 2560: משחק איקס עיגול לשני שחקנים עם מסך מגע, צלילים וזיהוי ניצחון. פרויקט של עדי גולדשטיין ופרג׳ חרבאוי.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tic-Tac-Toe · משחק איקס עיגול על Arduino">
+  <meta property="og:description" content="פרויקט חומרה אינטראקטיבי עם מסך מגע, משחק לשני שחקנים ומשוב קולי.">
+  <meta property="og:image" content="assets/hero-start.jpg">
+  <title>Tic-Tac-Toe על Arduino · עדי ופרג׳</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">דילוג לתוכן</a>
+
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Tic-Tac-Toe, חזרה לראש הדף">
+        <span class="brand-mark" aria-hidden="true"><span>×</span><span>○</span></span>
+        <span class="brand-text">TIC<span>·</span>TAC<span>·</span>TOE</span>
+      </a>
+      <nav class="main-nav" aria-label="ניווט ראשי">
+        <a href="#story">הפרויקט</a>
+        <a href="#gallery">גלריה</a>
+        <a href="#play">להתנסות</a>
+      </nav>
+      <a class="nav-action" href="#video">לצפייה בהדגמה <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> פרויקט Arduino · משחק אינטראקטיבי</div>
+          <h1 id="hero-title">משחק קטן.<br><em>חוויה בידיים.</em></h1>
+          <p class="hero-lead">איקס עיגול לשני שחקנים, על מסך מגע אמיתי. בוחרים משבצת, שומעים תגובה ומגלים מי השלים ראשון שורה של שלושה.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#video">צפייה בפרויקט <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#play">נסו את המשחק <span aria-hidden="true">←</span></a>
+          </div>
+          <div class="hero-byline">נוצר על ידי <strong>עדי גולדשטיין</strong> ו<strong>פרג׳ חרבאוי</strong></div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-frame">
+            <img src="assets/hero-start.jpg" width="1600" height="1200" alt="מסך הפתיחה של משחק האיקס עיגול על גבי מסך המגע" fetchpriority="high">
+            <span class="frame-tag">01 / מסך הפתיחה</span>
+          </div>
+          <div class="visual-sticker" aria-hidden="true">X <span>O</span> X<br><span>O</span> X <span>O</span></div>
+        </div>
+      </div>
+      <div class="shell hero-facts" aria-label="עיקרי הפרויקט">
+        <div><span class="fact-number">02</span><span class="fact-label">שחקנים</span></div>
+        <div><span class="fact-number">03×03</span><span class="fact-label">לוח מגע</span></div>
+        <div><span class="fact-number">01</span><span class="fact-label">לוח Arduino Mega</span></div>
+        <div><span class="fact-number">∞</span><span class="fact-label">סיבובים חוזרים</span></div>
+      </div>
+    </section>
+
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="shell story-grid">
+        <div class="section-heading">
+          <p class="kicker">מה עומד מאחורי המשחק</p>
+          <h2 id="story-title">מהמסך אל <span>המהלך הבא.</span></h2>
+        </div>
+        <div class="story-copy">
+          <p>במרכז הפרויקט עומד לוח איקס עיגול מוכר, אבל הפעם הוא פועל כמכשיר פיזי. מסך המגע מציג את תשע המשבצות וקולט את הבחירה של כל שחקן. הקוד מנהל את התורות, מונע בחירה במשבצת תפוסה ובודק ניצחון או תיקו.</p>
+          <p>כל מהלך מקבל צליל משלו, ובסוף המשחק מוצגת תוצאה על המסך ונשמעת מנגינה. לאחר מכן אפשר להתחיל סיבוב נוסף.</p>
+        </div>
+      </div>
+      <div class="shell feature-grid">
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">⌕</span><span class="feature-index">01 / INPUT</span><h3>נגיעה אחת, מהלך אחד</h3><p>מיפוי אזורי המגע לתשע המשבצות של הלוח.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">×○</span><span class="feature-index">02 / GAME</span><h3>תורות עם כללים</h3><p>סימון X ו־O לסירוגין, בדיקת משבצות תפוסות וזיהוי שורה מנצחת.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">♫</span><span class="feature-index">03 / FEEDBACK</span><h3>תמונה וצליל</h3><p>משוב קולי בזמן המשחק ומסך סיום לניצחון או לתיקו.</p></article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="section-heading gallery-heading">
+          <div><p class="kicker">מבט מקרוב</p><h2 id="gallery-title">הפרויקט <span>בפעולה.</span></h2></div>
+          <p>מסך, רכיבים ומשחק אחד שמתקיים מחוץ למחשב.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card-wide">
+            <img src="assets/hardware.jpg" width="1600" height="1200" loading="lazy" alt="מערכת המשחק הכוללת לוח Arduino, מסך מגע וזמזם מחוברים לחשמל">
+            <figcaption><span>01</span><strong>המערכת המלאה</strong><small>Arduino Mega 2560 · מסך מגע · זמזם</small></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/board.jpg" width="1600" height="1200" loading="lazy" alt="תקריב של לוח איקס עיגול על מסך המגע, עם סימוני X ו־O">
+            <figcaption><span>02</span><strong>לוח המשחק</strong><small>תורות, בחירה ומצב משחק</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section build-section" aria-labelledby="build-title">
+      <div class="shell build-grid">
+        <div>
+          <p class="kicker">מתחת למכסה</p>
+          <h2 id="build-title">קוד שפוגש <span>חומרה.</span></h2>
+          <p class="build-intro">הסקיצה נכתבה עבור Arduino Mega 2560 ומשלבת ציור על צג TFT, קריאת קלט ממסך מגע והפעלת זמזם.</p>
+          <div class="tech-pills" aria-label="טכנולוגיות ורכיבים"><span>Arduino Mega 2560</span><span>Arduino C++</span><span>Elegoo 2.8″ TFT</span><span>TouchScreen</span><span>Buzzer</span></div>
+        </div>
+        <div class="build-flow" aria-label="תהליך המשחק">
+          <div class="flow-item"><span>01</span><p>נוגעים במשבצת פנויה</p></div>
+          <div class="flow-item"><span>02</span><p>הסימן מופיע ונשמע צליל</p></div>
+          <div class="flow-item"><span>03</span><p>המשחק בודק ניצחון או תיקו</p></div>
+          <div class="flow-item"><span>04</span><p>מציגים תוצאה ומתחילים מחדש</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video" aria-labelledby="video-title">
+      <div class="shell video-grid">
+        <div class="video-copy"><p class="kicker">לראות את זה קורה</p><h2 id="video-title">על המסך.<br><span>בעולם האמיתי.</span></h2><p>הדגמת וידאו של הפרויקט הפיזי. הפעילו את הנגן כדי לראות את המשחק על המכשיר.</p></div>
+        <div class="video-wrap"><video controls preload="metadata" playsinline poster="assets/hero-start.jpg" aria-label="סרטון הדגמה של משחק איקס עיגול על Arduino"><source src="assets/demo.mp4" type="video/mp4">הדפדפן אינו תומך בניגון הסרטון.</video></div>
+      </div>
+    </section>
+
+    <section class="section play-section" id="play" aria-labelledby="play-title">
+      <div class="shell play-grid">
+        <div class="play-copy">
+          <p class="kicker">עכשיו תורכם</p>
+          <h2 id="play-title">רוצים <span>סיבוב?</span></h2>
+          <p>הדמיה קטנה בדפדפן של חוקי המשחק. שני שחקנים יכולים לבחור משבצות בתורות ולנסות להגיע לשלושה ברצף.</p>
+          <div class="play-note">המשחק כאן הוא הדמיית דפדפן; הפרויקט המקורי פועל על חומרת Arduino.</div>
+          <div class="play-legend"><span><i class="legend-x" aria-hidden="true">×</i> שחקן X</span><span><i class="legend-o" aria-hidden="true">○</i> שחקן O</span></div>
+        </div>
+        <div class="demo-panel">
+          <div class="demo-top"><span class="demo-label">TIC · TAC · TOE</span><span class="demo-live"><i aria-hidden="true"></i> PLAYABLE DEMO</span></div>
+          <p class="game-status" id="game-status" role="status" aria-live="polite">התור של X</p>
+          <div class="game-board" id="game-board" role="group" aria-label="לוח איקס עיגול"></div>
+          <button class="reset-button" id="reset-game" type="button">משחק חדש <span aria-hidden="true">↻</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><div class="footer-mark" aria-hidden="true">×<span>○</span>×</div><p>משחק איקס עיגול על Arduino<br>עדי גולדשטיין · פרג׳ חרבאוי</p></div>
+      <div class="footer-links"><a href="https://github.com/adig741/arduino-tic-tac-toe-touchscreen" target="_blank" rel="noopener noreferrer">קוד הפרויקט ב־GitHub ↗</a><a href="#top">בחזרה למעלה ↑</a><a href="#gallery">גלריה</a><a href="#video">הדגמה</a></div>
+    </div>
+    <div class="shell footer-bottom"><span>פרויקט Arduino · תכנות 1</span><span>Made to play.</span></div>
+  </footer>
+</body>
+</html>
