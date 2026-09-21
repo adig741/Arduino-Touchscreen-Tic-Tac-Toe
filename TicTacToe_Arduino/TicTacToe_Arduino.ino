@@ -1,7 +1,7 @@
      /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*        	Tic Tac Toe Game				          */
-   /*                  Adi Goldstein                   */
-  /*                  Faraj Kharbaoui                 */
+   /*             Programming 1 project              */
+  /*          Arduino Mega touchscreen game          */
  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 //Define pins
@@ -98,12 +98,12 @@ void setup()
   tft.setCursor(30, 120);        //position cursor correctly
   tft.setTextColor(GREEN);       //change text color
   tft.setTextSize(3);            //set text size
-  tft.println("Adi Goldstein");  //that's me!
+  tft.println("Arduino Mega");
 
   tft.setTextColor(DARKBLUE);  //set text color
   tft.setCursor(30, 160);      //position cursor correctly
   tft.setTextSize(3);          //set text size
-  tft.println("Faraj Kharbaoui");
+  tft.println("Two players");
 
   delay(3000);
 }
@@ -126,11 +126,11 @@ void loop()
   tft.setTextColor(ORANGE);      //change text color
   tft.setCursor(30, 160);        //position cursor correctly
   tft.setTextSize(3);            //set text size
-  tft.println("Adi Goldstein");  //that's me!
+  tft.println("Arduino Mega");
   tft.setTextColor(GREEN);       //change text color
   tft.setCursor(30, 195);        //position cursor correctly
   tft.setTextSize(3);            //set text size
-  tft.println("Faraj Kharbaoui");
+  tft.println("Two players");
   tft.setTextColor(WHITE);  //set text color
 
   int i = 0;
