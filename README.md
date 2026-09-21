@@ -1,4 +1,4 @@
-# Tic-Tac-Toe on Arduino
+# Arduino Touchscreen Tic-Tac-Toe
 
 ### A touchscreen Tic-Tac-Toe game for Arduino Mega
 
@@ -12,7 +12,7 @@
 
 A two-player Tic-Tac-Toe game developed as a Programming 1 Arduino project. The game runs on an **Elegoo Mega 2560** with a **2.8-inch Elegoo TFT touch shield** and a buzzer. Players tap a square to place alternating X and O marks; the display announces a win or tie and plays a short melody before returning to the start screen.
 
-**[View the project page](https://adig741.github.io/arduino-tic-tac-toe-touchscreen/)** · **[Open the sketch](TicTacToe_Arduino/TicTacToe_Arduino.ino)**
+**[View the project page](https://adig741.github.io/Arduino-Touchscreen-Tic-Tac-Toe/)** · **[Open the sketch](TicTacToe_Arduino/TicTacToe_Arduino.ino)**
 
 ## Project at a glance
 
