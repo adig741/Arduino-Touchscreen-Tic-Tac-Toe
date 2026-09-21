@@ -1,6 +1,6 @@
 # Tic-Tac-Toe on Arduino
 
-### משחק איקס עיגול על מסך מגע של Arduino Mega
+### A touchscreen Tic-Tac-Toe game for Arduino Mega
 
 <p align="center">
   <img src="docs/assets/hero-start.jpg" alt="Tic-Tac-Toe start screen on the Elegoo touch display" width="540">
@@ -62,9 +62,3 @@ The bundled Elegoo libraries are the copies supplied with the original hardware 
 ## About this repository
 
 This repository packages the original project as a focused GitHub portfolio entry. The public sketch preserves the gameplay and removes a broken startup color loop from the original file. The source folder also contains reference archives and a course report; those are intentionally omitted from this repository. Hardware behavior has not been retested during this packaging work.
-
----
-
-### בעברית
-
-משחק איקס עיגול לשני שחקנים, שנבנה בארדואינו Mega 2560 עם מסך מגע Elegoo בגודל 2.8 אינץ׳ ובאזר. נוגעים במשבצת כדי להציב X או O; המשחק מזהה ניצחון או תיקו, מציג הודעה ומשמיע צליל. הוראות ההתקנה והקוד נמצאים למעלה, ולצדם [דף הפרויקט](https://adig741.github.io/arduino-tic-tac-toe-touchscreen/) עם תמונות וסרטון הדגמה.

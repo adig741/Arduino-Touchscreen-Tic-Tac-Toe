@@ -18,7 +18,7 @@
       button.type = 'button';
       button.textContent = mark === 'X' ? '×' : mark === 'O' ? '○' : '';
       button.className = mark.toLowerCase();
-      button.setAttribute('aria-label', `משבצת ${index + 1}${mark ? `, ${mark}` : ', פנויה'}`);
+      button.setAttribute('aria-label', `Cell ${index + 1}${mark ? `, ${mark}` : ', empty'}`);
       button.disabled = Boolean(mark) || finished;
       button.addEventListener('click', () => play(index));
       boardElement.append(button);
@@ -31,19 +31,19 @@
     const winningLine = lines.find(line => line.every(position => cells[position] === turn));
     if (winningLine) {
       finished = true;
-      statusElement.textContent = `${turn} ניצח!`;
+      statusElement.textContent = `${turn} wins!`;
       render();
       winningLine.forEach(position => boardElement.children[position].classList.add('win'));
       return;
     }
     if (cells.every(Boolean)) {
       finished = true;
-      statusElement.textContent = 'תיקו! משחק נוסף?';
+      statusElement.textContent = "It's a draw! Play again?";
       render();
       return;
     }
     turn = turn === 'X' ? 'O' : 'X';
-    statusElement.textContent = `התור של ${turn}`;
+    statusElement.textContent = `${turn}'s turn`;
     render();
   }
 
@@ -51,7 +51,7 @@
     cells = Array(9).fill('');
     turn = 'X';
     finished = false;
-    statusElement.textContent = 'התור של X';
+    statusElement.textContent = "X's turn";
     render();
   });
 
