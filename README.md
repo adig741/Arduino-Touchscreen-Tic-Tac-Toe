@@ -10,7 +10,7 @@
   <strong>Two players · Touchscreen · Sound effects · Arduino C++</strong>
 </p>
 
-An interactive, two-player Tic-Tac-Toe game built by **Adi Goldstein and Faraj Kharbaoui** for a Programming 1 Arduino project. The game runs on an **Elegoo Mega 2560** with a **2.8-inch Elegoo TFT touch shield** and a buzzer. Players tap a square to place alternating X and O marks; the display announces a win or tie and plays a short melody before returning to the start screen.
+A two-player Tic-Tac-Toe game developed as a Programming 1 Arduino project. The game runs on an **Elegoo Mega 2560** with a **2.8-inch Elegoo TFT touch shield** and a buzzer. Players tap a square to place alternating X and O marks; the display announces a win or tie and plays a short melody before returning to the start screen.
 
 **[View the project page](https://adig741.github.io/arduino-tic-tac-toe-touchscreen/)** · **[Watch the demo](docs/assets/demo.mp4)** · **[Open the sketch](TicTacToe_Arduino/TicTacToe_Arduino.ino)**
 
@@ -51,7 +51,7 @@ The sketch defines touch pins `A2`, `A3`, `8`, and `9`, and TFT control pins `A3
 4. In **Tools → Board**, select **Arduino Mega or Mega 2560**. Select the connected port and upload.
 5. Tap **Start** on the display, then take turns selecting cells.
 
-The bundled Elegoo libraries are the copies supplied with the original hardware project. Their original notices and source headers are retained under [`libraries/`](libraries/). The game sketch is the work of Adi Goldstein and Faraj Kharbaoui.
+The bundled Elegoo libraries are the copies supplied with the original hardware project. Their original notices and source headers are retained under [`libraries/`](libraries/). The game sketch was created for the original course project.
 
 ## Gallery
 
