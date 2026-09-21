@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101827">
-  <meta name="description" content="A two-player Tic-Tac-Toe game built with an Arduino Mega 2560, an Elegoo touchscreen, and a buzzer. Created by Adi Goldstein and Faraj Kharbaoui.">
+  <meta name="description" content="A two-player Tic-Tac-Toe game built with an Arduino Mega 2560, an Elegoo touchscreen, and a buzzer for a Programming 1 course project.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Touchscreen Tic-Tac-Toe on Arduino">
   <meta property="og:description" content="An interactive Arduino project with a touchscreen, two-player gameplay, and sound feedback.">
-  <meta property="og:image" content="assets/hero-start.jpg">
-  <title>Touchscreen Tic-Tac-Toe on Arduino · Adi &amp; Faraj</title>
+  <meta property="og:image" content="assets/hardware.jpg">
+  <title>Touchscreen Tic-Tac-Toe on Arduino</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -19,7 +19,7 @@
     <div class="shell nav-wrap">
       <a class="brand" href="#top" aria-label="Tic-Tac-Toe, back to top"><span class="brand-mark" aria-hidden="true"><span>×</span><span>○</span></span><span class="brand-text">TIC<span>·</span>TAC<span>·</span>TOE</span></a>
       <nav class="main-nav" aria-label="Main navigation"><a href="#story">The project</a><a href="#gallery">Gallery</a><a href="#play">Play</a></nav>
-      <a class="nav-action" href="#video">Watch the demo <span aria-hidden="true">↗</span></a>
+      <a class="nav-action" href="#gallery">Explore the gallery <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -31,10 +31,10 @@
           <div class="eyebrow"><span class="eyebrow-dot"></span> Arduino project · Interactive game</div>
           <h1 id="hero-title">A classic game.<br><em>Now hands-on.</em></h1>
           <p class="hero-lead">Two-player Tic-Tac-Toe on a real touchscreen. Pick a square, hear the response, and race to make three in a row.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#video">Watch the project <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#play">Try the game <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-byline">Created by <strong>Adi Goldstein</strong> and <strong>Faraj Kharbaoui</strong></div>
+          <div class="hero-actions"><a class="button button-primary" href="#gallery">Explore the project <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#play">Try the game <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-byline">An Arduino project for a Programming 1 course</div>
         </div>
-        <div class="hero-visual"><div class="image-frame"><img src="assets/hero-start.jpg" width="1600" height="1200" alt="Tic-Tac-Toe start screen on the touch display" fetchpriority="high"><span class="frame-tag">01 / START SCREEN</span></div><div class="visual-sticker" aria-hidden="true">X <span>O</span> X<br><span>O</span> X <span>O</span></div></div>
+        <div class="hero-visual"><div class="image-frame"><img src="assets/hardware.jpg" width="1600" height="1200" alt="Arduino Mega and touchscreen Tic-Tac-Toe hardware" fetchpriority="high"><span class="frame-tag">01 / THE BUILD</span></div><div class="visual-sticker" aria-hidden="true">X <span>O</span> X<br><span>O</span> X <span>O</span></div></div>
       </div>
       <div class="shell hero-facts" aria-label="Project highlights">
         <div><span class="fact-number">02</span><span class="fact-label">PLAYERS</span></div><div><span class="fact-number">03×03</span><span class="fact-label">TOUCH GRID</span></div><div><span class="fact-number">01</span><span class="fact-label">ARDUINO MEGA</span></div><div><span class="fact-number">∞</span><span class="fact-label">REPLAYABLE ROUNDS</span></div>
@@ -58,11 +58,9 @@
 
     <section class="section build-section" aria-labelledby="build-title"><div class="shell build-grid"><div><p class="kicker">UNDER THE HOOD</p><h2 id="build-title">Code meets <span>hardware.</span></h2><p class="build-intro">Built for the Arduino Mega 2560, the sketch draws to a TFT display, reads touch input, and drives a buzzer.</p><div class="tech-pills" aria-label="Technology and components"><span>Arduino Mega 2560</span><span>Arduino C++</span><span>Elegoo 2.8″ TFT</span><span>TouchScreen</span><span>Buzzer</span></div></div><div class="build-flow" aria-label="How a round works"><div class="flow-item"><span>01</span><p>Tap an empty square</p></div><div class="flow-item"><span>02</span><p>The mark appears and a tone plays</p></div><div class="flow-item"><span>03</span><p>The game checks for a win or tie</p></div><div class="flow-item"><span>04</span><p>See the result, then play again</p></div></div></div></section>
 
-    <section class="section video-section" id="video" aria-labelledby="video-title"><div class="shell video-grid"><div class="video-copy"><p class="kicker">SEE IT PLAY</p><h2 id="video-title">On the screen.<br><span>In the real world.</span></h2><p>Watch the physical build in action. Press play to see a round on the device.</p></div><div class="video-wrap"><video controls preload="metadata" playsinline poster="assets/hero-start.jpg" aria-label="Video demonstration of the Arduino Tic-Tac-Toe game"><source src="assets/demo.mp4" type="video/mp4">Your browser does not support this video.</video></div></div></section>
-
     <section class="section play-section" id="play" aria-labelledby="play-title"><div class="shell play-grid"><div class="play-copy"><p class="kicker">YOUR TURN</p><h2 id="play-title">Ready for <span>a round?</span></h2><p>Try a small browser simulation of the game rules. Two players can pick squares in turn and aim for three in a row.</p><div class="play-note">This is a browser simulation. The original project runs on Arduino hardware.</div><div class="play-legend"><span><i class="legend-x" aria-hidden="true">×</i> Player X</span><span><i class="legend-o" aria-hidden="true">○</i> Player O</span></div></div><div class="demo-panel"><div class="demo-top"><span class="demo-label">TIC · TAC · TOE</span><span class="demo-live"><i aria-hidden="true"></i> PLAYABLE DEMO</span></div><p class="game-status" id="game-status" role="status" aria-live="polite">X's turn</p><div class="game-board" id="game-board" role="group" aria-label="Tic-Tac-Toe board"></div><button class="reset-button" id="reset-game" type="button">New game <span aria-hidden="true">↻</span></button></div></div></section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-grid"><div><div class="footer-mark" aria-hidden="true">×<span>○</span>×</div><p>Touchscreen Tic-Tac-Toe on Arduino<br>Adi Goldstein · Faraj Kharbaoui</p></div><div class="footer-links"><a href="https://github.com/adig741/arduino-tic-tac-toe-touchscreen" target="_blank" rel="noopener noreferrer">Project code on GitHub ↗</a><a href="#top">Back to top ↑</a><a href="#gallery">Gallery</a><a href="#video">Demo</a></div></div><div class="shell footer-bottom"><span>Arduino project · Programming 1</span><span>Made to play.</span></div></footer>
+  <footer class="site-footer"><div class="shell footer-grid"><div><div class="footer-mark" aria-hidden="true">×<span>○</span>×</div><p>Touchscreen Tic-Tac-Toe on Arduino<br>Programming 1 project</p></div><div class="footer-links"><a href="https://github.com/adig741/arduino-tic-tac-toe-touchscreen" target="_blank" rel="noopener noreferrer">Project code on GitHub ↗</a><a href="#top">Back to top ↑</a><a href="#gallery">Gallery</a><a href="#play">Simulation</a></div></div><div class="shell footer-bottom"><span>Arduino project · Programming 1</span><span>Made to play.</span></div></footer>
 </body>
 </html>
